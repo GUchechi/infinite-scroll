@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-  const [boxes, setBoxes] = useState([{bg: "#777"}])
+  const [boxes, setBoxes] = useState([
+    {bg:'#' + ((Math.random() * 0xffffff) << 0).toString(16)}])
 
   useEffect(() => {
     const interval = setInterval(() => {
